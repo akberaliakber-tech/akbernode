@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Output thru EJS</h1>
+    <ul>
+        <% itemList.forEach(item => { %>
+
+            <li><strong>Name:</strong> <%= item.name %>  <%= item.title %> <strong>Active:</strong> <%= item.isActive %> <strong>Posted Date:</strong> <%= item.postedDate.toDateString() %>    </li>
+     
+
+        <% }); %>
+
+    </ul>
+</body>
+</html>
