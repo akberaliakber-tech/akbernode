@@ -1,11 +1,11 @@
 export {};
 import express from 'express';
-import type { Request, Response } from 'express';
 import { Pool } from 'pg';
-import { Item } from './models/Item.js';
+
 import { databaseConfigs } from './db.js';
 import cors from 'cors';
 import jobRoutes from './routes/jobRoutes.js';  
+import siteRoutes from './routes/siteRoutes.js';  
 
 export const app = express();
 app.set("view engine", "ejs");
@@ -18,4 +18,5 @@ app.use(cors({
 
 app.use(express.json());
 app.use('/api/jobs', jobRoutes);
+app.use('/api/site-contents', siteRoutes);
 
